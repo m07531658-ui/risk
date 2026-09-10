@@ -1,0 +1,1056 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#173f3e" />
+    <meta name="description" content="خدمات تنظيف وصيانة منزلية احترافية في الأحساء" />
+    <title>خدمات عامة | خدمات تنظيف الأحساء</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Noto+Kufi+Arabic:wght@500;600;700;800&display=swap");
+
+      :root {
+        --ink: #173f3e;
+        --ink-soft: #41615d;
+        --mint: #dcece1;
+        --mint-deep: #2f7771;
+        --coral: #f39c79;
+        --cream: #faf7ef;
+        --paper: #fffdf8;
+        --line: rgba(23, 63, 62, 0.13);
+        --shadow: 0 22px 55px rgba(24, 65, 61, 0.14);
+        --radius: 30px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        min-width: 320px;
+        margin: 0;
+        background:
+          radial-gradient(circle at 8% 8%, rgba(243, 156, 121, 0.22), transparent 24rem),
+          radial-gradient(circle at 90% 90%, rgba(220, 236, 225, 0.8), transparent 25rem),
+          #f4f0e7;
+        color: var(--ink);
+        font-family: "IBM Plex Sans Arabic", Tahoma, sans-serif;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      button,
+      a {
+        -webkit-tap-highlight-color: transparent;
+      }
+
+      .page {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        padding: 36px 18px;
+      }
+
+      .flyer {
+        position: relative;
+        width: min(100%, 1080px);
+        overflow: hidden;
+        border: 1px solid rgba(255, 255, 255, 0.75);
+        border-radius: 38px;
+        background: var(--paper);
+        box-shadow: var(--shadow);
+        isolation: isolate;
+      }
+
+      .flyer::before,
+      .flyer::after {
+        position: absolute;
+        z-index: -1;
+        display: block;
+        border-radius: 50%;
+        content: "";
+        pointer-events: none;
+      }
+
+      .flyer::before {
+        top: -190px;
+        left: -150px;
+        width: 420px;
+        height: 420px;
+        background: rgba(220, 236, 225, 0.7);
+      }
+
+      .flyer::after {
+        right: -190px;
+        bottom: 210px;
+        width: 430px;
+        height: 430px;
+        background: rgba(243, 156, 121, 0.12);
+      }
+
+      .topbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        padding: 24px 38px;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .brand-mark {
+        display: grid;
+        width: 48px;
+        height: 48px;
+        place-items: center;
+        border-radius: 16px;
+        background: var(--coral);
+        color: var(--ink);
+        font-size: 24px;
+        box-shadow: 0 10px 22px rgba(243, 156, 121, 0.3);
+      }
+
+      .brand-name {
+        display: block;
+        font-family: "Noto Kufi Arabic", Tahoma, sans-serif;
+        font-size: 18px;
+        font-weight: 800;
+        letter-spacing: -0.05em;
+        line-height: 1.2;
+      }
+
+      .brand-note {
+        display: block;
+        margin-top: 4px;
+        color: #788b83;
+        font-size: 11px;
+        font-weight: 600;
+      }
+
+      .mini-call {
+        display: inline-flex;
+        align-items: center;
+        gap: 9px;
+        border-radius: 999px;
+        background: var(--ink);
+        color: #fffdf8;
+        padding: 12px 18px;
+        font-size: 13px;
+        font-weight: 700;
+        transition: transform 180ms ease, background 180ms ease;
+      }
+
+      .mini-call:hover {
+        transform: translateY(-2px);
+        background: var(--mint-deep);
+      }
+
+      .hero {
+        display: grid;
+        grid-template-columns: 0.96fr 1.04fr;
+        align-items: center;
+        gap: clamp(28px, 6vw, 76px);
+        padding: clamp(42px, 7vw, 76px) clamp(24px, 7vw, 82px) 54px;
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 18px;
+        border: 1px solid #cfe4d6;
+        border-radius: 999px;
+        background: #edf6ee;
+        color: var(--mint-deep);
+        padding: 8px 14px;
+        font-size: 12px;
+        font-weight: 700;
+      }
+
+      .eyebrow::before {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: var(--coral);
+        content: "";
+      }
+
+      h1,
+      h2,
+      h3 {
+        margin: 0;
+        font-family: "Noto Kufi Arabic", Tahoma, sans-serif;
+      }
+
+      h1 {
+        max-width: 570px;
+        font-size: clamp(2.1rem, 5.6vw, 4.65rem);
+        font-weight: 800;
+        letter-spacing: -0.08em;
+        line-height: 1.48;
+      }
+
+      h1 strong {
+        position: relative;
+        color: var(--mint-deep);
+        font-weight: 800;
+      }
+
+      h1 strong::after {
+        position: absolute;
+        right: 0;
+        bottom: -4px;
+        width: 82%;
+        height: 8px;
+        border-radius: 99px;
+        background: rgba(243, 156, 121, 0.52);
+        content: "";
+      }
+
+      .hero-copy {
+        max-width: 500px;
+        margin: 24px 0 0;
+        color: #62766e;
+        font-size: clamp(15px, 2vw, 18px);
+        line-height: 2;
+      }
+
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 12px;
+        margin-top: 28px;
+      }
+
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        min-height: 50px;
+        border-radius: 999px;
+        padding: 12px 20px;
+        font-size: 14px;
+        font-weight: 700;
+        transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
+      }
+
+      .button:hover {
+        transform: translateY(-3px);
+      }
+
+      .button-primary {
+        background: var(--coral);
+        box-shadow: 0 12px 25px rgba(243, 156, 121, 0.28);
+      }
+
+      .button-primary:hover {
+        background: #f5aa8b;
+        box-shadow: 0 16px 30px rgba(243, 156, 121, 0.36);
+      }
+
+      .button-secondary {
+        border: 1px solid var(--line);
+        background: rgba(255, 253, 248, 0.72);
+        color: var(--ink-soft);
+      }
+
+      .button-secondary:hover {
+        background: #eef5ed;
+      }
+
+      .hero-points {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 18px;
+        margin: 28px 0 0;
+        padding-top: 20px;
+        border-top: 1px solid var(--line);
+        color: #71837b;
+        font-size: 12px;
+        font-weight: 600;
+      }
+
+      .hero-points span {
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
+      }
+
+      .hero-points span::before {
+        display: inline-grid;
+        width: 18px;
+        height: 18px;
+        place-items: center;
+        border-radius: 50%;
+        background: var(--mint);
+        color: var(--mint-deep);
+        content: "✓";
+        font-size: 11px;
+        font-weight: 800;
+      }
+
+      .hero-photo-wrap {
+        position: relative;
+        min-height: 410px;
+      }
+
+      .hero-photo {
+        position: absolute;
+        inset: 0 4% 0 4%;
+        overflow: hidden;
+        border: 10px solid #fffdf8;
+        border-radius: 46% 46% 28% 28%;
+        background: var(--mint);
+        box-shadow: 0 25px 48px rgba(38, 90, 78, 0.17);
+        transform: rotate(-2deg);
+      }
+
+      .hero-photo img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+        object-position: center;
+      }
+
+      .photo-label,
+      .rating {
+        position: absolute;
+        z-index: 2;
+        border-radius: 18px;
+        box-shadow: 0 15px 28px rgba(35, 74, 65, 0.14);
+      }
+
+      .photo-label {
+        top: 17%;
+        right: -1%;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        background: rgba(255, 253, 248, 0.96);
+        padding: 13px 16px;
+        color: var(--ink);
+        font-size: 12px;
+        font-weight: 700;
+      }
+
+      .photo-label b {
+        display: grid;
+        width: 30px;
+        height: 30px;
+        place-items: center;
+        border-radius: 10px;
+        background: var(--mint);
+        color: var(--mint-deep);
+        font-size: 16px;
+      }
+
+      .rating {
+        bottom: 11%;
+        left: -3%;
+        background: var(--ink);
+        color: #fffdf8;
+        padding: 15px 18px;
+      }
+
+      .stars {
+        color: #f7b290;
+        font-size: 16px;
+        letter-spacing: 2px;
+      }
+
+      .rating small {
+        display: block;
+        margin-top: 5px;
+        color: #d9e8de;
+        font-size: 11px;
+        font-weight: 600;
+      }
+
+      .section {
+        padding: 68px clamp(24px, 7vw, 82px);
+      }
+
+      .section-mint {
+        background: #edf5ed;
+      }
+
+      .section-head {
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+        gap: 24px;
+        margin-bottom: 26px;
+      }
+
+      .section-kicker {
+        display: block;
+        margin-bottom: 9px;
+        color: #e48364;
+        font-size: 12px;
+        font-weight: 800;
+      }
+
+      h2 {
+        max-width: 600px;
+        font-size: clamp(1.55rem, 3.4vw, 2.75rem);
+        letter-spacing: -0.07em;
+        line-height: 1.6;
+      }
+
+      .section-description {
+        max-width: 430px;
+        margin: 0;
+        color: #687b74;
+        font-size: 14px;
+        line-height: 1.95;
+      }
+
+      .service-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 12px;
+      }
+
+      .service {
+        min-height: 150px;
+        border: 1px solid rgba(47, 119, 113, 0.12);
+        border-radius: 21px;
+        background: rgba(255, 253, 248, 0.78);
+        padding: 18px;
+        transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
+      }
+
+      .service-image {
+        width: calc(100% + 36px);
+        height: 118px;
+        display: block;
+        margin: -18px -18px 16px;
+        border-radius: 20px 20px 14px 14px;
+        object-fit: cover;
+      }
+
+      .service:hover {
+        transform: translateY(-5px);
+        background: #fffdf8;
+        box-shadow: 0 14px 28px rgba(39, 82, 69, 0.1);
+      }
+
+      .service-icon {
+        display: grid;
+        width: 38px;
+        height: 38px;
+        margin-bottom: 15px;
+        place-items: center;
+        border-radius: 13px;
+        background: var(--mint);
+        color: var(--mint-deep);
+        font-size: 19px;
+      }
+
+      .service:nth-child(even) .service-icon {
+        background: #f8dfd2;
+        color: #da7959;
+      }
+
+      .service h3 {
+        font-size: 14px;
+        line-height: 1.8;
+      }
+
+      .service p {
+        margin: 7px 0 0;
+        color: #7b8c85;
+        font-size: 11px;
+        line-height: 1.8;
+      }
+
+      .features {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 12px;
+      }
+
+      .feature {
+        border-radius: 20px;
+        background: var(--ink);
+        color: #fffdf8;
+        padding: 22px 18px;
+      }
+
+      .feature b {
+        display: block;
+        margin-bottom: 8px;
+        color: var(--coral);
+        font-family: "Noto Kufi Arabic", Tahoma, sans-serif;
+        font-size: 21px;
+      }
+
+      .feature span {
+        color: #dce9df;
+        font-size: 12px;
+        line-height: 1.8;
+      }
+
+      .contact {
+        display: grid;
+        grid-template-columns: 1fr 0.75fr;
+        align-items: center;
+        gap: 28px;
+        background: var(--coral);
+      }
+
+      .contact h2 {
+        max-width: 540px;
+      }
+
+      .contact p {
+        max-width: 520px;
+        margin: 13px 0 0;
+        color: #65483d;
+        font-size: 14px;
+        line-height: 1.9;
+      }
+
+      .contact-card {
+        border-radius: 24px;
+        background: rgba(255, 253, 248, 0.75);
+        padding: 22px;
+      }
+
+      .contact-card small {
+        display: block;
+        color: #6d756d;
+        font-size: 11px;
+        font-weight: 700;
+      }
+
+      .contact-number {
+        display: block;
+        direction: ltr;
+        margin: 7px 0 16px;
+        color: var(--ink);
+        font-family: "Noto Kufi Arabic", Tahoma, sans-serif;
+        font-size: clamp(1.35rem, 3vw, 2rem);
+        font-weight: 800;
+        letter-spacing: 0.02em;
+      }
+
+      .contact-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 9px;
+      }
+
+      .contact-buttons .button {
+        flex: 1 1 140px;
+        min-height: 46px;
+        padding-inline: 13px;
+        font-size: 12px;
+      }
+
+      .button-dark {
+        background: var(--ink);
+        color: #fffdf8;
+      }
+
+      .button-dark:hover {
+        background: var(--mint-deep);
+      }
+
+      .button-light {
+        background: #fffdf8;
+        color: var(--ink);
+      }
+
+      footer {
+        padding: 22px clamp(24px, 7vw, 82px) 28px;
+        background: var(--ink);
+        color: #dbe9df;
+        text-align: center;
+      }
+
+      .designer {
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
+        margin-bottom: 12px;
+        color: var(--coral);
+        font-size: 12px;
+        font-weight: 700;
+        transition: color 180ms ease;
+      }
+
+      .designer:hover {
+        color: #ffd0ba;
+      }
+
+      .designer::before {
+        content: "✦";
+      }
+
+      .copyright {
+        display: block;
+        color: #9fbab0;
+        font-size: 11px;
+      }
+
+      .floating-actions {
+        position: fixed;
+        z-index: 20;
+        right: 20px;
+        bottom: 20px;
+        display: grid;
+        gap: 10px;
+      }
+
+      .floating-action {
+        display: grid;
+        width: 50px;
+        height: 50px;
+        place-items: center;
+        border-radius: 50%;
+        color: #fffdf8;
+        box-shadow: 0 12px 24px rgba(23, 63, 62, 0.2);
+        font-size: 21px;
+        transition: transform 180ms ease;
+      }
+
+      .floating-action:hover {
+        transform: scale(1.08);
+      }
+
+      .floating-phone {
+        background: var(--coral);
+        color: var(--ink);
+      }
+
+      .floating-whatsapp {
+        background: #229a79;
+      }
+
+      .reveal {
+        opacity: 0;
+        transform: translateY(16px);
+        transition: opacity 600ms ease, transform 600ms ease;
+      }
+
+      .reveal.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      @media (max-width: 850px) {
+        .page {
+          padding: 0;
+        }
+
+        .flyer {
+          min-height: 100vh;
+          border: 0;
+          border-radius: 0;
+        }
+
+        .topbar {
+          padding: 20px 22px;
+        }
+
+        .mini-call {
+          padding: 10px 14px;
+          font-size: 12px;
+        }
+
+        .hero {
+          grid-template-columns: 1fr;
+          padding: 38px 22px 42px;
+        }
+
+        .hero-copy,
+        .hero h1 {
+          max-width: none;
+        }
+
+        .hero-photo-wrap {
+          min-height: min(105vw, 465px);
+          order: -1;
+        }
+
+        .service-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .features {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .contact {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .topbar {
+          gap: 10px;
+        }
+
+        .brand-mark {
+          width: 42px;
+          height: 42px;
+          border-radius: 14px;
+        }
+
+        .brand-name {
+          font-size: 16px;
+        }
+
+        .brand-note {
+          font-size: 9px;
+        }
+
+        .mini-call {
+          display: none;
+        }
+
+        .hero {
+          gap: 24px;
+          padding-inline: 18px;
+        }
+
+        h1 {
+          font-size: clamp(2rem, 12vw, 3.3rem);
+          line-height: 1.55;
+        }
+
+        .hero-photo-wrap {
+          min-height: 350px;
+        }
+
+        .photo-label {
+          right: -1%;
+          padding: 10px 12px;
+          font-size: 10px;
+        }
+
+        .rating {
+          left: -2%;
+          padding: 11px 13px;
+        }
+
+        .stars {
+          font-size: 13px;
+        }
+
+        .rating small {
+          font-size: 9px;
+        }
+
+        .section {
+          padding: 52px 18px;
+        }
+
+        .section-head {
+          display: block;
+        }
+
+        .section-description {
+          margin-top: 8px;
+        }
+
+        .service-grid,
+        .features {
+          gap: 8px;
+        }
+
+        .service {
+          min-height: 155px;
+          padding: 14px;
+        }
+
+        .service h3 {
+          font-size: 12px;
+        }
+
+        .feature {
+          padding: 16px 13px;
+        }
+
+        .feature b {
+          font-size: 18px;
+        }
+
+        .feature span {
+          font-size: 10px;
+        }
+
+        .contact-buttons {
+          display: grid;
+        }
+
+        .floating-actions {
+          right: 14px;
+          bottom: 14px;
+        }
+
+        .floating-action {
+          width: 46px;
+          height: 46px;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          scroll-behavior: auto !important;
+          transition-duration: 0.01ms !important;
+          animation-duration: 0.01ms !important;
+        }
+      }
+    
+/* تحسينات العرض الجديدة */
+.hero, .section-head, .hero-content, .hero-copy, h1, h2, h3 {text-align:center;}
+.hero {grid-template-columns:1fr;}
+.hero-photo-wrap {min-height:380px; width:100%; order:-1;}
+.hero-photo {inset:0; border-radius:32px; transform:none;}
+.hero-photo img {object-position:center;}
+.floating-actions {left:20px; right:auto; bottom:25px;}
+.floating-action {width:170px;height:58px;border-radius:18px;display:flex;gap:10px;font-size:18px;font-weight:800;justify-content:center;}
+.floating-action::after {font-size:14px;}
+.floating-phone::after {content:"اتصال مباشر";}
+.floating-whatsapp::after {content:"واتساب";}
+.service-grid {grid-template-columns:repeat(3,1fr);}
+.reviews-grid {display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:24px;}
+.review-card {background:#fff;border-radius:24px;padding:24px;box-shadow:0 12px 30px rgba(0,0,0,.08);text-align:center;}
+.review-stars {color:#f39c79;font-size:22px;}
+@media(max-width:700px){
+.page{padding:10px;}
+.flyer{border-radius:24px;}
+.hero{padding:28px 16px;display:flex;flex-direction:column;}
+.hero-photo-wrap{min-height:260px;}
+h1{font-size:2rem;}
+.service-grid,.reviews-grid{grid-template-columns:1fr;}
+.floating-action{width:150px;height:52px;}
+}
+
+      .service { overflow:hidden; text-align:center; }
+      .service-image { display:block; width:100%; height:190px; object-fit:cover; object-position:center; border-radius:20px; margin:0 0 16px; background:#e9efe9; }
+      .hero-photo img { width:100%; height:100%; object-fit:cover; object-position:center; display:block; }
+      .hero-content, .section-head, .section-description, .contact { text-align:center; }
+      .hero-actions, .hero-points { justify-content:center; }
+      @media (max-width: 720px) {
+        .page { padding:0; }
+        .flyer { border-radius:0; width:100%; }
+        .topbar { padding:16px 14px; }
+        .hero { grid-template-columns:1fr; padding:24px 14px 30px; gap:20px; }
+        .hero-content { order:2; }
+        .hero-photo-wrap { order:1; width:100%; }
+        .hero-photo { min-height:310px; height:48vh; max-height:430px; }
+        .hero-photo img { object-fit:cover; }
+        .section { padding-left:14px; padding-right:14px; }
+        .service-grid { grid-template-columns:1fr !important; gap:16px; }
+        .service { padding:12px !important; }
+        .service-image { height:240px; margin-bottom:14px; }
+        .floating-actions { bottom:14px; left:10px; right:10px; display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+        .floating-action { width:auto !important; height:56px !important; border-radius:16px !important; font-size:24px; }
+      }
+
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <article class="flyer">
+        <header class="topbar">
+          <a class="brand" href="#home" aria-label="العودة إلى بداية الموقع">
+            <span class="brand-mark" aria-hidden="true">✦</span>
+            <span>
+              <span class="brand-name">خدمات عامة</span>
+              <span class="brand-note">خدمات منزلية بالأحساء</span>
+            </span>
+          </a>
+          <a class="mini-call" href="tel:0590842766" aria-label="اتصل الآن على 0590842766">
+            <span aria-hidden="true">☎</span>
+            احجز موعدك
+          </a>
+        </header>
+
+        <section class="hero" id="home">
+          <div class="hero-content reveal">
+            <span class="eyebrow">خدمة محلية · الأحساء وما حولها</span>
+            <h1>بيتك يستحق <strong>عناية تليق به</strong></h1>
+            <p class="hero-copy">
+              من أول اتصال إلى آخر لمعة، نرتّب لك خدمات منزلك بفريق يهتم بالتفاصيل
+              ويصل في الموعد.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="https://wa.me/201029095046?text=مرحباً، أرغب في حجز خدمة منزلية" target="_blank" rel="noopener">
+                احجز عبر واتساب <span aria-hidden="true">←</span>
+              </a>
+              <a class="button button-secondary" href="#services">شاهد الخدمات</a>
+            </div>
+            <div class="hero-points" aria-label="مميزات الخدمة">
+              <span>مواعيد مرنة</span>
+              <span>فريق مدرّب</span>
+              <span>أسعار واضحة</span>
+            </div>
+          </div>
+
+          <div class="hero-photo-wrap reveal" aria-label="فريق تنظيف محترف">
+            <div class="hero-photo"><span class="hero-icon" aria-hidden="true">✦</span></div>
+            <div class="photo-label">
+              <b aria-hidden="true">✓</b>
+              <span>فريق موثوق<br />يصل في الموعد</span>
+            </div>
+            <div class="rating">
+              <div class="stars" aria-label="تقييم خمس نجوم">★★★★★</div>
+              <small>ثقة أهل الأحساء</small>
+            </div>
+          </div>
+        </section>
+
+        <section class="section section-mint reveal" id="services">
+          <div class="section-head">
+            <div>
+              <span class="section-kicker">خدماتنا</span>
+              <h2>كل ما يحتاجه بيتك، في مكان واحد</h2>
+            </div>
+            <p class="section-description">
+              خدمات عملية للبيوت والفلل والمجالس والاستراحات في الهفوف والمبرز والقرى القريبة.
+            </p>
+          </div>
+          <div class="service-grid">
+            <article class="service">
+              <span class="service-icon" aria-hidden="true">🏠</span>
+              <h3>تنظيف الشقق والفلل</h3>
+              <p>تنظيف شامل للغرف والمطابخ والحمامات.</p>
+            </article>
+            <article class="service">
+              <span class="service-icon" aria-hidden="true">🛋️</span>
+              <h3>غسيل الكنب والسجاد والمجالس</h3>
+              <p>تنظيف عميق يناسب كل خامة.</p>
+            </article>
+            <article class="service">
+              <span class="service-icon" aria-hidden="true">🚰</span>
+              <h3>غسيل وتعقيم الخزانات</h3>
+              <p>عناية دقيقة بالنظافة والسلامة.</p>
+            </article>
+            <article class="service">
+              <span class="service-icon" aria-hidden="true">🔥</span>
+              <h3>غسيل وصيانة الأفران</h3>
+              <p>إزالة الدهون واستعادة أفضل أداء.</p>
+            </article>
+            <article class="service">
+              <span class="service-icon" aria-hidden="true">🐜</span>
+              <h3>مكافحة الحشرات</h3>
+              <p>حلول فعالة ومدروسة للمنزل.</p>
+            </article>
+            <article class="service">
+              <span class="service-icon" aria-hidden="true">🛠️</span>
+              <h3>تسليك المجاري</h3>
+              <p>استجابة سريعة للانسدادات.</p>
+            </article>
+            <article class="service">
+              <span class="service-icon" aria-hidden="true">❄️</span>
+              <h3>غسيل المكيفات</h3>
+              <p>هواء أنظف وأداء أفضل.</p>
+            </article>
+            <article class="service">
+              <span class="service-icon" aria-hidden="true">🚽</span>
+              <h3>شفط البيارات</h3>
+              <p>خدمة منظمة للمنازل والمنشآت.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section reveal">
+          <div class="section-head">
+            <div>
+              <span class="section-kicker">لماذا خدمات عامة؟</span>
+              <h2>خدمة مرتبة من أول مكالمة</h2>
+            </div>
+            <p class="section-description">نشتغل بهدوء ووضوح حتى تحصل على النتيجة التي تتوقعها.</p>
+          </div>
+          <div class="features">
+            <div class="feature"><b>01</b><span>فريق محترف يهتم بممتلكاتك.</span></div>
+            <div class="feature"><b>02</b><span>مواعيد مرنة تناسب يومك.</span></div>
+            <div class="feature"><b>03</b><span>أسعار واضحة قبل بدء الخدمة.</span></div>
+            <div class="feature"><b>04</b><span>تغطية الهفوف والمبرز وما حولهما.</span></div>
+          </div>
+        </section>
+
+        <section class="section contact reveal" id="contact">
+          <div>
+            <span class="section-kicker">احجز الآن</span>
+            <h2>جاهزين نخلّي بيتك أرتب وأنظف</h2>
+            <p>اتصل أو أرسل رسالة واتساب، وسنرتب لك الخدمة والموعد المناسب.</p>
+          </div>
+          <div class="contact-card">
+            <small>رقم التواصل والحجز</small>
+            <a class="contact-number" href="tel:0590842766">0590842766</a>
+            <div class="contact-buttons">
+              <a class="button button-dark" href="tel:0590842766">اتصال مباشر</a>
+              <a class="button button-light" href="https://wa.me/201029095046?text=مرحباً، أرغب في حجز خدمة منزلية" target="_blank" rel="noopener">واتساب</a>
+            </div>
+          </div>
+        </section>
+
+        
+<section class="section reveal">
+  <div class="section-head">
+    <p class="section-kicker">آراء العملاء</p>
+    <h2>تقييمات عملائنا</h2>
+    <p class="section-description">خدمة موثوقة ونتائج ترضي عملاءنا.</p>
+  </div>
+  <div class="reviews-grid">
+    <div class="review-card"><div class="review-stars">★★★★★</div><p>خدمة ممتازة وسرعة في التنفيذ، فريق محترف.</p><b>محمد</b></div>
+    <div class="review-card"><div class="review-stars">★★★★★</div><p>التنظيف كان مرتب والنتيجة أفضل مما توقعت.</p><b>أحمد</b></div>
+    <div class="review-card"><div class="review-stars">★★★★★</div><p>تعامل راقٍ والتزام بالمواعيد، أنصح بهم.</p><b>خالد</b></div>
+  </div>
+</section>
+<footer>
+          <a class="designer" href="https://wa.me/201029095046?text=مرحباً%20م.%20نجوى%20إبراهيم" target="_blank" rel="noopener">
+            تم التصميم بواسطة م. نجوى إبراهيم
+          </a>
+          <span class="copyright">© <span id="year"></span> خدمات عامة لتنظيف الأحساء · جميع الحقوق محفوظة</span>
+        </footer>
+      </article>
+
+      <div class="floating-actions" aria-label="التواصل السريع">
+        <a class="floating-action floating-whatsapp" href="https://wa.me/201029095046?text=مرحباً، أرغب في حجز خدمة منزلية" target="_blank" rel="noopener" aria-label="التواصل عبر واتساب">◔</a>
+        <a class="floating-action floating-phone" href="tel:0590842766" aria-label="الاتصال بالخدمة">☎</a>
+      </div>
+    </main>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      const revealItems = document.querySelectorAll(".reveal");
+      const revealObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+              revealObserver.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.12 }
+      );
+
+      revealItems.forEach((item) => revealObserver.observe(item));
+    </script>
+  </body>
+</html>
